@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { action } from "@remix-run/router";
 import api from "../../services/api"
 
 export const session = () => JSON.parse(localStorage.getItem('tokenBearer') || '{}')

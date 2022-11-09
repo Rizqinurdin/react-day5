@@ -1,7 +1,7 @@
 import { Button, Form, Input, Typography } from "antd";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { getToken, login } from "../../redux/reducers/tokenSlice";
 const { Title } = Typography;
 
@@ -18,7 +18,7 @@ const Login = () => {
       form.resetFields();
       navigate("/", { replace: true });
     }
-  }, [token]); // esling-disbale-line
+  }, [token]); // eslint-disable-line
 
   const onFinishFailed = (errorInfo) => {
     console.log("Failed: ", errorInfo);
